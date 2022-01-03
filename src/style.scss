@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  background-color: #222f3e;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+// Editor
+.editor {
+  width: 70%;
+  height: calc(100% - 40px);
+  padding: 20px;
+  margin: 20px 10px 20px 20px;
+  background-color: #8395a7;
+  border-radius: 5px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    height: 100%;
+  }
+}
+
+.textarea {
+  width: 100%;
+  height: 90%;
+  padding: 10px;
+  margin-top: 20px;
+  overflow-y: scroll;
+  resize: none;
+  outline: none;
+
+  @media (max-width: 768px) {
+    height: 85%;
+  }
+}
+
+// Previewer
+.previewer {
+  background-color: #01a3a4;
+  margin: 20px 20px 20px 10px;
+  width: 100%;
+  height: calc(100% - 40px);
+  padding: 20px;
+  word-break: break-word;
+  border-radius: 5px;
+  overflow-y: scroll;
+
+  > h2 {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.markdown {
+  border: solid 1px #c8d6e5;
+  margin-top: 20px;
+  padding: 10px;
+  height: 90%;
+  background-color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  word-break: break-word;
+  overflow-y: scroll;
+
+  @media (max-width: 900px) {
+    font-size: 11px;
+  }
+
+  blockquote {
+    padding: 0 10px;
+    margin-top: 10px;
+    border-left: 10px solid #dfe2e5;
+  }
+
+  code {
+    display: inline-block;
+    max-width: fit-content;
+    background: #222;
+    color: #fff;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 11px;
+
+    @media (max-width: 900px) {
+      font-size: smaller;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+}
